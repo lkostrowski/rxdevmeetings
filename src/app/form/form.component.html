@@ -1,0 +1,13 @@
+<form (ngSubmit)="submitMessage($event)" [formGroup]="form">
+  <div>
+    <label>Name</label>
+    <input type="text" name="user" [formControlName]="'user'"/>
+  </div>
+  <div>
+    <label>Message</label>
+    <input [formControlName]="'content'"/>
+  </div>
+  <div>
+    <button type="submit" [disabled]="form.invalid">Send</button>
+  </div>
+</form>
